@@ -1,0 +1,21 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Program34
+{
+    internal class Program
+    {
+        static void Main()
+        {
+            int res = ~0;
+            Console.WriteLine($"`~0` в типе int = {res}"); // Выведет: -1
+
+            // Показываем только младшие 8 бит, чтобы вывод был читаемым
+            Console.WriteLine("В двоичном виде (младшие 8 бит): " +
+                              Convert.ToString(res & 0xFF, 2).PadLeft(8, '0'));
+        }
+    }
+}
